@@ -23,13 +23,13 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM myguests WHERE id!=5";
+$sql = "SELECT * FROM myguests WHERE  id = '6' AND NOT firstname = 'abdul'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
     echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br> <br>";
-   
+
   }
 } else {
   echo "0 results";
