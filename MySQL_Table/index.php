@@ -46,7 +46,7 @@
             <h1 class="text-light text-center pb-5">MYSQL Table With PHP Code :-</h1>
             
     <div class="mt-5">
-            <a href="Form.php"><button class="btn btn-success float-right pl-5 pr-5 mb-3">MYSQL Form Data</button></a>
+            <a href="create.php"><button class="btn btn-success float-right pl-5 pr-5 mb-3">MYSQL Form Data</button></a>
     </div>
       <table class=" table table-hover mt-5">
           <tr>
@@ -55,8 +55,8 @@
               <th>LastName</th>
               <th>Email</th>
               <th>reg_date</th>
-              <th>Change</th>
-              <th>Delete</th>
+              <th>Action</th>
+              
           </tr>
           <?php
     if ($result->num_rows > 0) {
@@ -68,8 +68,7 @@
               <td class="text-danger"><?php echo $row['lastname']?></td>
               <td class="text-primary"><?php echo $row['email']?></td>
               <td class="text-danger"><?php echo $row['reg_date']?></td>
-              <td class="text-primary"><a href="#" class="text-primary">Update</a>&nbsp;</td>
-              <td class="c7"><a href="#" class="text-danger">Delete</a>&nbsp;</td>
+              <td class="text-primary"><a href="edit.php" class="text-primary"><?php  ?>Edit</a>&nbsp;&nbsp;<a href="#" class="text-danger">Delete</a>&nbsp;</td>
           </tr>
       
     <?php  
