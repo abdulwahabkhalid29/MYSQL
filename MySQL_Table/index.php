@@ -1,6 +1,6 @@
 <?php
     include ("connection.php");
-    $sql = "SELECT * FROM myguests";
+    $sql = "SELECT * FROM myGuests";
     $result = $conn->query($sql);
 
 ?>
@@ -10,11 +10,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <style>
-       table,td,th{
+        table,td,th{
             border-collapse: collapse;
             border: 1px solid lightgray;
             vertical-align: bottom;
@@ -28,17 +27,18 @@
         }
         tr:nth-child(even){
         background-color: lightgray;
-        }
-        tr:nth-child(odd){
+    }
+    tr:nth-child(odd){
         background-color: white;
-        }
-        tr:hover{
-            background-color: gray;
-        }
-        th{
-            font-size: 25px;
-        }
+    }
+    tr:hover{
+        background-color: gray;
+    }
+    th{
+        font-size: 25px;
+    }
     </style>
+    <title>table</title>
     
 </head>
 <body style="background: linear-gradient(to right, orangered, orange);">
@@ -68,7 +68,12 @@
               <td class="text-danger"><?php echo $row['lastname']?></td>
               <td class="text-primary"><?php echo $row['email']?></td>
               <td class="text-danger"><?php echo $row['reg_date']?></td>
+<<<<<<< HEAD
               <td class="text-primary"><a href="edit.php" class="text-primary"><?php  ?>Edit</a>&nbsp;&nbsp;<a href="#" class="text-danger">Delete</a>&nbsp;</td>
+=======
+              <td class="text-primary"><a href="edit.php?id=<?php echo $row['id']?>" class="text-primary">Edit</a>&nbsp;</td>
+              <td class="c7"><a href="delete.php?id=<?php echo $row['id']?>" class="text-danger">Delete</a>&nbsp;</td>
+>>>>>>> 5f481ba1c33fe4ee69d7e74f17866ac10fdc0dfc
           </tr>
       
     <?php  
