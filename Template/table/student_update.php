@@ -5,7 +5,8 @@
     $lastname  = $_POST['lastname'];
     $email  = $_POST['email'];
     $phonenumber = $_POST['phonenumber'];
-    $sql = "UPDATE student_table SET firstname='$firstname', lastname='$lastname', email='$email', phonenumber='$phonenumber' WHERE id=$id";
+    $classid = $_POST['classid'];
+    $sql = "UPDATE student_table SET firstname='$firstname', lastname='$lastname', email='$email', phonenumber='$phonenumber', classid='$classid' WHERE id=$id";
     $result = mysqli_query($conn,$sql);
     if ($result) {
         header("location: student.php");

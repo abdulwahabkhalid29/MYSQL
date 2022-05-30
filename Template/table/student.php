@@ -120,6 +120,7 @@
               <th>Last Name</th>
               <th>Email</th>
               <th>Phone Number</th>
+              <th>Class Id</th>
               <th>Action</th>
 
           </tr>
@@ -130,11 +131,12 @@
           <tr>
               <td class="text-danger"><?php echo $row['id']?></td>
               <td class="text-primary"><?php echo $row['firstname']?></td>
-              <td class="text-primary"><?php echo $row['lastname']?></td>
-              <td class="text-danger"><?php echo $row['email']?></td>
-              <td class="text-primary"><?php echo $row['phonenumber']?></td>
-              <td class="text-primary"><a href="student_edit.php?id=<?php echo $row['id']?>" class="text-primary">Edit</a>&nbsp;
-              <a href="student_delete.php?id=<?php echo $row['id']?>" class="text-danger">Delete</a>&nbsp;</td>
+              <td class="text-danger"><?php echo $row['lastname']?></td>
+              <td class="text-primary"><?php echo $row['email']?></td>
+              <td class="text-danger"><?php echo $row['phonenumber']?></td>
+              <td class="text-primary"><?php echo $row['classid']?></td>
+              <td class="text-danger"><a href="student_edit.php?id=<?php echo $row['id']?>" class="text-primary">Edit</a>&nbsp;
+              <a href="student_delete.php?id=<?php echo $row['id']?>" class="text-primary">Delete</a>&nbsp;</td>
           </tr>
       
     <?php  

@@ -4,7 +4,8 @@
     $lastname  = $_POST['lastname'];
     $email  = $_POST['email'];
     $phonenumber = $_POST['phonenumber'];
-    $sql = "INSERT into student_table (firstname,lastname,email,phonenumber) VALUE ('$firstname','$lastname','$email','$phonenumber')";
+    $classid = $_POST['classid'];
+    $sql = "INSERT into student_table (firstname,lastname,email,phonenumber,classid) VALUE ('$firstname','$lastname','$email','$phonenumber','$classid')";
     $result = mysqli_query($conn,$sql);
     if ($result) {
         header("location: student.php");

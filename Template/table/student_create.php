@@ -31,9 +31,13 @@
                         <label for="email">Email</label>
                         <input name="email" type="text" class="w-100 form-control">
                     </div>
-                    <div class="mt-3 col-md-12">
+                    <div class="mt-5 col-md-6">
                         <label for="phonenumber">Phone Number</label>
                         <input type="text" class="form-control" name="phonenumber">
+                    </div>
+                    <div class="mt-3 col-md-12">
+                        <label for="classid">Class id</label>
+                        <input type="text" class="form-control" name="classid">
                     </div>
                 </div>
                 <div class="row">

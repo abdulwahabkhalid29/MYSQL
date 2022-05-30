@@ -19,17 +19,21 @@
             <h1 class="text-danger p-4 mt-5">TEACHER FORM :-</h1>
             <form action="teacher_store.php" method="POST">
                 <div style="font-family: initial;" class="text-dark row">
-                    <div class="col-md-12 mt-5">
+                    <div class="col-md-6 mt-5">
                         <label for="firstname">first Name</label>
                         <input name="firstname" type="text" class="w-100 form-control">
                     </div>
-                    <div class="col-md-12 mt-5">
+                    <div class="col-md-6 mt-5">
                         <label for="email">Email</label>
                         <input name="email" type="text" class="w-100 form-control">
                     </div>
-                    <div class="mt-3 col-md-12">
+                    <div class="mt-3 col-md-6">
                         <label for="phoneNumber">Phone Number</label>
                         <input type="text" class="form-control" name="phoneNumber">
+                    </div>
+                    <div class="mt-3 col-md-6">
+                        <label for="classid">Class Id</label>
+                        <input type="text" class="form-control" name="classid">
                     </div>
                 </div>
                 <div class="row">

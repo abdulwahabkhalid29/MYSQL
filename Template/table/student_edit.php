@@ -48,6 +48,10 @@
             <label for="phonenumber">Phone Number</label>
             <input type="text" class="w-100 form-control" name="phonenumber" value="<?php echo $row['phonenumber']; ?>">
         </div>
+        <div class="col-md-6 mt-5">
+            <label for="classid">Class id</label>
+            <input type="text" class="w-100 form-control" name="classid" value="<?php echo $row['classid']; ?>">
+        </div>
     </div>
     <div class="row">
         <div class="mt-4 col-md-12">

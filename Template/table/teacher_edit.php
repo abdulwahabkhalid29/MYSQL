@@ -33,16 +33,20 @@
     <div style="font-family: initial;" class="text-dark row">
         <input type="hidden" name="id" value="<?php echo $row['id'] ?>">
         <div class="col-md-6 mt-5">
-            <label for="firstname">firstNmae</label>
+            <label for="firstname">First Name</label>
             <input type="text" class="w-100 form-control"  name="firstname" value="<?php echo $row['firstname']; ?>">
         </div>
-        <div class="col-md-12 mt-5">
+        <div class="col-md-6 mt-5">
             <label for="email">Email</label>
             <input type="text"  class="w-100 form-control" name="email" value="<?php echo $row['email']; ?>">
         </div>
         <div class="col-md-6 mt-5">
             <label for="phoneNumber">Phone Number</label>
             <input type="text" class="w-100 form-control" name="phoneNumber" value="<?php echo $row['phoneNumber']; ?>">
+        </div>
+        <div class="col-md-6 mt-5">
+            <label for="classid">Class Id</label>
+            <input type="text" class="w-100 form-control" name="classid" value="<?php echo $row['classid']; ?>">
         </div>
     </div>
     <div class="row">
