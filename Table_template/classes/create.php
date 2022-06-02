@@ -14,10 +14,10 @@
 <body style="background: linear-gradient(to right, blue, lightblue);">
 <div class="container bg-light p-5 mt-5 shadow-lg">
             <div class="mt-5">
-                <a href="class.php"><button class="btn btn-outline-primary float-right pl-5 pr-5 mb-3">Back to Table</button></a>
+                <a href="classes/class.php"><button class="btn btn-outline-primary float-right pl-5 pr-5 mb-3">Back to Table</button></a>
             </div>
             <h1 class="text-danger p-4 mt-5">CLASS FORM :-</h1>
-            <form action="class_store.php" method="POST">
+            <form action="classes/store.php" method="POST">
                 <div style="font-family: initial;" class="text-dark row">
                     <div class="col-md-6 mt-5">
                         <label for="classname">Class Name</label>

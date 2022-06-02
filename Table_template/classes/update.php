@@ -8,6 +8,6 @@
     $sql = "UPDATE table_class SET classname='$classname', roomnumber='$roomnumber', email='$email', buildingnumber='$buildingnumber' WHERE id=$id";
     $result = mysqli_query($conn,$sql);
     if ($result) {
-        header("location: class.php");
+        header("location: clesses/class.php");
     }
 ?>

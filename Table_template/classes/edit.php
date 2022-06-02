@@ -19,7 +19,7 @@
 <body style="background: linear-gradient(to right, orangered, orange);">
 <div class="container bg-light p-5 mt-5 shadow-lg">
             <div class="mt-5">
-                <a href="class.php"><button class="btn btn-outline-primary float-right pl-5 pr-5 mb-3">Back to Table</button></a>
+                <a href="clesses/class.php"><button class="btn btn-outline-primary float-right pl-5 pr-5 mb-3">Back to Table</button></a>
             </div>
             <h1 class="text-danger p-4 mt-5">MYSQL FORM :-</h1>
 
@@ -29,7 +29,7 @@
       while($row = $result->fetch_assoc()) {
       ?>
 
-<form action="class_update.php" method="POST">
+<form action="classes/update.php" method="POST">
     <div style="font-family: initial;" class="text-dark row">
         <input type="hidden" name="id" value="<?php echo $row['id'] ?>">
         <div class="col-md-6 mt-5">

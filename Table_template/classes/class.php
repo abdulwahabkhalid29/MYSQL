@@ -112,7 +112,7 @@
             <h1 class="text-dark text-center pb-5">CLASS_TABLE</h1>
             
     <div class="mt-5">
-            <a href="class_create.php"><button class="btn btn-success float-right pl-5 pr-5 mb-3">MYSQL Form Data</button></a>
+            <a href="classes/create.php"><button class="btn btn-success float-right pl-5 pr-5 mb-3">MYSQL Form Data</button></a>
     </div>
       <table class=" table table-hover mt-5">
           <tr>
@@ -133,8 +133,8 @@
               <td class="text-danger"><?php echo $row['roomnumber']?></td>
               <td class="text-primary"><?php echo $row['email']?></td>
               <td class="text-danger"><?php echo $row['buildingnumber']?></td>
-              <td class="text-primary"><a href="class_edit.php?id=<?php echo $row['id']?>" class="text-primary">Edit</a>&nbsp;
-              <a href="class_delete.php?id=<?php echo $row['id']?>" class="text-danger">Delete</a>&nbsp;</td>
+              <td class="text-primary"><a href="classes/edit.php?id=<?php echo $row['id']?>" class="text-primary">Edit</a>&nbsp;
+              <a href="classes/delete.php?id=<?php echo $row['id']?>" class="text-danger">Delete</a>&nbsp;</td>
           </tr>
       
     <?php  

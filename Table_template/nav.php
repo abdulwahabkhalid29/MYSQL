@@ -7,13 +7,13 @@
         <div class="collapse navbar-collapse" id="navbarsExample03">
           <ul class="navbar-nav mr-auto ">
             <li class="nav-item ml-4 active ">
-              <a class="nav-link text-light" href="class.php">Class Table</a>
+              <a class="nav-link text-light" href="classes/class.php">Class Table</a>
             </li>
             <li class="nav-item ml-4 active">
-              <a class="nav-link text-light" href="teacher.php">Teacher Table</a>
+              <a class="nav-link text-light" href="teachers/teacher.php">Teacher Table</a>
             </li>
             <li class="nav-item ml-4 active">
-              <a class="nav-link text-light" href="student.php">Student Table</a>
+              <a class="nav-link text-light" href="students/student.php">Student Table</a>
             </li>
           </ul>
           <form class="form-inline my-2 my-md-0 text-center">
