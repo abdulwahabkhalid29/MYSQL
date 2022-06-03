@@ -1,5 +1,5 @@
 <?php
-    include ("connection.php");
+    include ("../connection.php");
     $sql = "SELECT * FROM table_class WHERE id = $_GET[id]";
     $result = $conn->query($sql);
 
@@ -11,15 +11,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <title>table</title>
     
 </head>
 <body style="background: linear-gradient(to right, orangered, orange);">
 <div class="container bg-light p-5 mt-5 shadow-lg">
             <div class="mt-5">
-                <a href="clesses/class.php"><button class="btn btn-outline-primary float-right pl-5 pr-5 mb-3">Back to Table</button></a>
+                <a href="class.php"><button class="btn btn-outline-primary float-right pl-5 pr-5 mb-3">Back to Table</button></a>
             </div>
             <h1 class="text-danger p-4 mt-5">MYSQL FORM :-</h1>
 
@@ -29,7 +29,7 @@
       while($row = $result->fetch_assoc()) {
       ?>
 
-<form action="classes/update.php" method="POST">
+<form action="update.php" method="POST">
     <div style="font-family: initial;" class="text-dark row">
         <input type="hidden" name="id" value="<?php echo $row['id'] ?>">
         <div class="col-md-6 mt-5">
@@ -63,7 +63,7 @@
     </div>
     </div>
 
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.js"></script>
 </body>
 </html>

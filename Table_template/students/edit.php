@@ -1,5 +1,5 @@
 <?php
-    include ("connection.php");
+    include ("../connection.php");
     $sql = "SELECT * FROM student_table WHERE id = $_GET[id]";
     $result = $conn->query($sql);
 
@@ -11,8 +11,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <title>Student Table</title>
     
 </head>
@@ -29,7 +29,7 @@
       while($row = $result->fetch_assoc()) {  
       ?>
 
-<form action="student_update.php" method="POST">
+<form action="update.php" method="POST">
     <div style="font-family: initial;" class="text-dark row">
         <input type="hidden" name="id" value="<?php echo $row['id'] ?>">
         <div class="col-md-6 mt-5">
@@ -67,7 +67,7 @@
     </div>
     </div>
 
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.js"></script>
 </body>
 </html>

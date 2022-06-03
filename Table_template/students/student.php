@@ -1,5 +1,5 @@
 <?php
-    include ("connection.php");
+    include ("../connection.php");
     $sql = "SELECT * FROM student_table";
     $result = $conn->query($sql);
 ?>
@@ -9,8 +9,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <style>
         table,td,th{
             border-collapse: collapse;
@@ -20,7 +20,7 @@
             
         }
         .back{
-        background-image: url(assets/image/xbg_2.jpg.pagespeed.ic.UrtJzl_WMI.webp);
+        background-image: url(../assets/image/xbg_2.jpg.pagespeed.ic.UrtJzl_WMI.webp);
         background-size: 100%;
         background-position: 50% 50%;
         height: 550px;
@@ -50,7 +50,7 @@
 <body style="">
 <div class="container-fluid bg-light back">
     <div class="container">
-    <?php include("nav.php")?>
+    <?php include("../nav.php")?>
         <div class="mt-5 pt-5 ml-5 pb-5">
         <p class="text-secondary">We have 850,000 great job offers you deserve!</p>
             <h1 class="text-light"><b> Your Dream <br> <span style="font-family:cursive;"> Job is Waiting </span></b></h1><br><br>
@@ -111,7 +111,7 @@
             <h1 class="text-dark text-center pb-5">STUDENT_TABLE</h1>
             
     <div class="mt-5">
-            <a href="student_create.php"><button class="btn btn-success float-right pl-5 pr-5 mb-5 ">MYSQL Form Data</button></a>
+            <a href="create.php"><button class="btn btn-success float-right pl-5 pr-5 mb-5 ">MYSQL Form Data</button></a>
     </div>
       <table class=" table table-hover mt-5">
           <tr>
@@ -135,8 +135,8 @@
               <td class="text-primary"><?php echo $row['email']?></td>
               <td class="text-danger"><?php echo $row['phonenumber']?></td>
               <td class="text-primary"><?php echo $row['classid']?></td>
-              <td class="text-danger"><a href="student_edit.php?id=<?php echo $row['id']?>" class="text-primary">Edit</a>&nbsp;
-              <a href="student_delete.php?id=<?php echo $row['id']?>" class="text-primary">Delete</a>&nbsp;</td>
+              <td class="text-danger"><a href="edit.php?id=<?php echo $row['id']?>" class="text-primary">Edit</a>&nbsp;
+              <a href="delete.php?id=<?php echo $row['id']?>" class="text-primary">Delete</a>&nbsp;</td>
           </tr>
       
     <?php  
@@ -145,9 +145,9 @@
     ?>
     </table>
     </div>
-    <?php include("footer.php")?>
+    <?php include("../footer.php")?>
 
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.js"></script>
 </body>
 </html>
