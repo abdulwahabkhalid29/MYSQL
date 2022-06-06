@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 01, 2022 at 10:11 AM
+-- Generation Time: Jun 06, 2022 at 10:28 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.15
 
@@ -24,34 +24,36 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `teacher_table`
+-- Table structure for table `student`
 --
 
-CREATE TABLE `teacher_table` (
+CREATE TABLE `student` (
   `id` int(11) NOT NULL,
   `firstname` varchar(255) NOT NULL,
-  `email` varchar(156) NOT NULL,
-  `phoneNumber` int(30) NOT NULL,
-  `classid` int(30) NOT NULL
+  `lastname` varchar(156) NOT NULL,
+  `phonenumber` int(30) NOT NULL,
+  `email` varchar(56) NOT NULL,
+  `classid` int(36) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `teacher_table`
+-- Dumping data for table `student`
 --
 
-INSERT INTO `teacher_table` (`id`, `firstname`, `email`, `phoneNumber`, `classid`) VALUES
-(2, 'Abdul Wahab', 'abdulwahab29@gmail.com', 3452324, 6),
-(3, 'zeeshan222222', 'class1@gmail.com', 213432432, 0),
-(4, 'zeeshan222222', 'class1@gmail.com', 34, 3);
+INSERT INTO `student` (`id`, `firstname`, `lastname`, `phonenumber`, `email`, `classid`) VALUES
+(2, 'abdul', 'wahab', 34634, 'abdulwahab29@gmail.com', 2),
+(3, '', '', 0, '', 2),
+(4, '', '', 0, '', 2),
+(5, 'rghred', 'rgr', 0, 'rgeerg', 3);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `teacher_table`
+-- Indexes for table `student`
 --
-ALTER TABLE `teacher_table`
+ALTER TABLE `student`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -59,10 +61,10 @@ ALTER TABLE `teacher_table`
 --
 
 --
--- AUTO_INCREMENT for table `teacher_table`
+-- AUTO_INCREMENT for table `student`
 --
-ALTER TABLE `teacher_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+ALTER TABLE `student`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

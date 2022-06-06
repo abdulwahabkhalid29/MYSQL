@@ -1,6 +1,6 @@
 <?php
     include ("../connection.php");
-    $sql = "SELECT * FROM student_table";
+    $sql = "SELECT * FROM student";
     $result = $conn->query($sql);
 ?>
 <!DOCTYPE html>
@@ -118,8 +118,8 @@
               <th>Id</th>
               <th>First Name</th>
               <th>Last Name</th>
-              <th>Email</th>
               <th>Phone Number</th>
+              <th>Email</th>
               <th>Class Id</th>
               <th>Action</th>
 
@@ -132,8 +132,8 @@
               <td class="text-danger"><?php echo $row['id']?></td>
               <td class="text-primary"><?php echo $row['firstname']?></td>
               <td class="text-danger"><?php echo $row['lastname']?></td>
-              <td class="text-primary"><?php echo $row['email']?></td>
               <td class="text-danger"><?php echo $row['phonenumber']?></td>
+              <td class="text-primary"><?php echo $row['email']?></td>
               <td class="text-primary"><?php echo $row['classid']?></td>
               <td class="text-danger"><a href="edit.php?id=<?php echo $row['id']?>" class="text-primary">Edit</a>&nbsp;
               <a href="delete.php?id=<?php echo $row['id']?>" class="text-primary">Delete</a>&nbsp;</td>

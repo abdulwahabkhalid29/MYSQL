@@ -1,5 +1,7 @@
 <?php
-    include ("../connection.php")
+    include ("../connection.php");
+    $sql = "SELECT * FROM class"; 
+    $result = $conn->query($sql);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,23 +23,32 @@
                 <div style="font-family: initial;" class="text-dark row">
                     <div class="col-md-6 mt-5">
                         <label for="firstname">First Name</label>
-                        <input name="firstname" type="text" class="w-100 form-control">
+                        <input name="firstname" type="text" class="w-100 form-control"required>
                     </div>
                     <div class="col-md-6 mt-5">
                         <label for="lastname">Last Name </label>
-                        <input name="lastname" type="text" class="w-100 form-control">
-                    </div>
-                    <div class="col-md-6 mt-5">
-                        <label for="email">Email</label>
-                        <input name="email" type="text" class="w-100 form-control">
+                        <input name="lastname" type="text" class="w-100 form-control" required>
                     </div>
                     <div class="mt-5 col-md-6">
                         <label for="phonenumber">Phone Number</label>
-                        <input type="text" class="form-control" name="phonenumber">
+                        <input type="text" class="form-control" name="phonenumber" required>
+                    </div>
+                    <div class="col-md-6 mt-5">
+                        <label for="email">Email</label>
+                        <input name="email" type="text" class="w-100 form-control" required>
                     </div>
                     <div class="mt-3 col-md-12">
-                        <label for="classid">Class id</label>
-                        <input type="text" class="form-control" name="classid">
+                    <label for="classid">Class ID</label>
+                            <select class="form-control" name="classid" required>
+                            <option value="">Please Select</option>
+                            <?php
+                                if ($result->num_rows > 0){
+                                while($row = $result->fetch_assoc()){
+                            ?>
+                                <option value="<?php echo $row['id']; ?>"><?php echo $row['classname']; ?></option>
+                            <?php } ?>
+                            <?php } ?>    
+                        </select>
                     </div>
                 </div>
                 <div class="row">

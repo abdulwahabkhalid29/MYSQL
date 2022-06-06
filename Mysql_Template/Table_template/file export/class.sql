@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 01, 2022 at 10:03 AM
+-- Generation Time: Jun 06, 2022 at 10:28 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.15
 
@@ -24,34 +24,33 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_class`
+-- Table structure for table `class`
 --
 
-CREATE TABLE `table_class` (
+CREATE TABLE `class` (
   `id` int(11) NOT NULL,
-  `classname` varchar(255) NOT NULL,
-  `roomnumber` int(30) NOT NULL,
-  `email` varchar(156) NOT NULL,
-  `buildingnumber` int(30) NOT NULL,
-  `classid` int(30) NOT NULL
+  `classname` int(30) NOT NULL,
+  `florenumber` int(56) NOT NULL,
+  `buildingnumber` int(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `table_class`
+-- Dumping data for table `class`
 --
 
-INSERT INTO `table_class` (`id`, `classname`, `roomnumber`, `email`, `buildingnumber`, `classid`) VALUES
-(1, 'Abdul Wahab', 123, 'abdulwahabklhalid29@gmail.com', 61, 0),
-(7, 'jfghjfgjf', 567, 'fghfgjhfgjn', 6457676, 0);
+INSERT INTO `class` (`id`, `classname`, `florenumber`, `buildingnumber`) VALUES
+(2, 0, 3, 6578),
+(3, 2, 3, 4),
+(4, 0, 7868, 97696);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `table_class`
+-- Indexes for table `class`
 --
-ALTER TABLE `table_class`
+ALTER TABLE `class`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -59,10 +58,10 @@ ALTER TABLE `table_class`
 --
 
 --
--- AUTO_INCREMENT for table `table_class`
+-- AUTO_INCREMENT for table `class`
 --
-ALTER TABLE `table_class`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+ALTER TABLE `class`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

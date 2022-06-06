@@ -1,6 +1,6 @@
 <?php
     include ("../connection.php");
-    $sql = "SELECT * FROM teacher_table";
+    $sql = "SELECT * FROM teacher";
     $result = $conn->query($sql);
 ?>
 <!DOCTYPE html>
@@ -116,8 +116,8 @@
       <table class=" table table-hover mt-5">
           <tr>
               <th>Id</th>
-              <th>first Name</th>
-              <th>Email</th>
+              <th>First Name</th>
+              <th>Last Name</th>
               <th>Phone Number</th>
               <th>Class Id</th>
               <th>Action</th>
@@ -130,8 +130,8 @@
           <tr>
               <td class="text-danger"><?php echo $row['id']?></td>
               <td class="text-primary"><?php echo $row['firstname']?></td>
-              <td class="text-danger"><?php echo $row['email']?></td>
-              <td class="text-primary"><?php echo $row['phoneNumber']?></td>
+              <td class="text-primary"><?php echo $row['lastname']?></td>
+              <td class="text-primary"><?php echo $row['phonenumber']?></td>
               <td class="text-danger"><?php echo $row['classid']?></td>
               <td class="text-primary"><a href="edit.php?id=<?php echo $row['id']?>" class="text-primary">Edit</a>&nbsp;
               <a href="delete.php?id=<?php echo $row['id']?>" class="text-danger">Delete</a>&nbsp;</td>

@@ -1,6 +1,6 @@
 <?php
     include ("../connection.php");
-    $sql = "SELECT * FROM table_class WHERE id = $_GET[id]";
+    $sql = "SELECT * FROM teacher WHERE id = $_GET[id]";
     $result = $conn->query($sql);
 
 
@@ -19,34 +19,34 @@
 <body style="background: linear-gradient(to right, orangered, orange);">
 <div class="container bg-light p-5 mt-5 shadow-lg">
             <div class="mt-5">
-                <a href="class.php"><button class="btn btn-outline-primary float-right pl-5 pr-5 mb-3">Back to Table</button></a>
+                <a href="teacher.php"><button class="btn btn-outline-primary float-right pl-5 pr-5 mb-3">Back to Table</button></a>
             </div>
             <h1 class="text-danger p-4 mt-5">MYSQL FORM :-</h1>
 
 
           <?php
     if ($result->num_rows > 0) {
-      while($row = $result->fetch_assoc()) {
+      while($row = $result->fetch_assoc()) {  
       ?>
 
 <form action="update.php" method="POST">
     <div style="font-family: initial;" class="text-dark row">
         <input type="hidden" name="id" value="<?php echo $row['id'] ?>">
         <div class="col-md-6 mt-5">
-            <label for="classname">Class Name</label>
-            <input type="text" class="w-100 form-control"  name="classname" value="<?php echo $row['classname']; ?>">
+            <label for="firstname">First Name</label>
+            <input type="text" class="w-100 form-control"  name="firstname" value="<?php echo $row['firstname']; ?>">
         </div>
         <div class="col-md-6 mt-5">
-            <label for="roomnumber">Room Number</label>
-            <input type="text" class="w-100 form-control" name="roomnumber" value="<?php echo $row['roomnumber']; ?>">
-        </div>
-        <div class="col-md-12 mt-5">
-            <label for="email">Email</label>
-            <input type="text"  class="w-100 form-control" name="email" value="<?php echo $row['email']; ?>">
+            <label for="lastname">Last Name</label>
+            <input type="text"  class="w-100 form-control" name="lastname" value="<?php echo $row['lastname']; ?>">
         </div>
         <div class="col-md-6 mt-5">
-            <label for="buildingnumber">Building Number</label>
-            <input type="text" class="w-100 form-control" name="buildingnumber" value="<?php echo $row['buildingnumber']; ?>">
+            <label for="phonenumber">Phone Number</label>
+            <input type="text" class="w-100 form-control" name="phonenumber" value="<?php echo $row['phonenumber']; ?>">
+        </div>
+        <div class="col-md-6 mt-5">
+            <label for="classid">Class Id</label>
+            <input type="text" class="w-100 form-control" name="classid" value="<?php echo $row['classid']; ?>">
         </div>
     </div>
     <div class="row">

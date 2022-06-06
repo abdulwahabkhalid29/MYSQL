@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 01, 2022 at 10:14 AM
+-- Generation Time: Jun 06, 2022 at 10:28 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.15
 
@@ -24,38 +24,33 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `student_table`
+-- Table structure for table `teacher`
 --
 
-CREATE TABLE `student_table` (
+CREATE TABLE `teacher` (
   `id` int(11) NOT NULL,
   `firstname` varchar(255) NOT NULL,
   `lastname` varchar(156) NOT NULL,
-  `email` varchar(255) NOT NULL,
   `phonenumber` int(30) NOT NULL,
-  `classid` int(30) NOT NULL
+  `classid` int(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `student_table`
+-- Dumping data for table `teacher`
 --
 
-INSERT INTO `student_table` (`id`, `firstname`, `lastname`, `email`, `phonenumber`, `classid`) VALUES
-(2, 'abdul', 'wahab', 'abdulwahab29@gmail.com', 789678, 6),
-(3, 'zeeshan', 'khalid', 'zeeshankhalid29@gmail.com', 85685, 0),
-(5, 'jawaid2', 'afzal2', 'class2@gmail.com', 76457567, 0),
-(6, 'abdul', 'wahab', 'abdulwahab29@gmail.com', 978687, 0),
-(7, 'zeeshan222222', 'KHALID', 'class1@gmail.com', 45645645, 0),
-(8, 'fahad', 'khalid', 'fk858733642@gmail.com', 34634, 9);
+INSERT INTO `teacher` (`id`, `firstname`, `lastname`, `phonenumber`, `classid`) VALUES
+(2, 'abdul', 'wahab', 3333, 12),
+(4, 'zeeshan222222', 'khalid', 76457567, 5);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `student_table`
+-- Indexes for table `teacher`
 --
-ALTER TABLE `student_table`
+ALTER TABLE `teacher`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -63,10 +58,10 @@ ALTER TABLE `student_table`
 --
 
 --
--- AUTO_INCREMENT for table `student_table`
+-- AUTO_INCREMENT for table `teacher`
 --
-ALTER TABLE `student_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+ALTER TABLE `teacher`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

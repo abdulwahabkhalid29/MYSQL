@@ -1,9 +1,10 @@
 <?php
     include ("../connection.php");
-    $sql = "SELECT * FROM student_table WHERE id = $_GET[id]";
+    $sql = "SELECT * FROM student WHERE id = $_GET[id]";
     $result = $conn->query($sql);
 
-
+    $sql2 = "SELECT * FROM class"; 
+    $result2 = $conn->query($sql2);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,23 +35,33 @@
         <input type="hidden" name="id" value="<?php echo $row['id'] ?>">
         <div class="col-md-6 mt-5">
             <label for="firstname">First Name</label>
-            <input type="text" class="w-100 form-control"  name="firstname" value="<?php echo $row['firstname']; ?>">
+            <input type="text" class="w-100 form-control"  name="firstname" value="<?php echo $row['firstname']; ?>" required>
         </div>
         <div class="col-md-6 mt-5">
             <label for="lastname">Last Name</label>
-            <input type="text" class="w-100 form-control" name="lastname" value="<?php echo $row['lastname']; ?>">
-        </div>
-        <div class="col-md-12 mt-5">
-            <label for="email">Email</label>
-            <input type="text"  class="w-100 form-control" name="email" value="<?php echo $row['email']; ?>">
+            <input type="text" class="w-100 form-control" name="lastname" value="<?php echo $row['lastname']; ?>" required>
         </div>
         <div class="col-md-6 mt-5">
             <label for="phonenumber">Phone Number</label>
-            <input type="text" class="w-100 form-control" name="phonenumber" value="<?php echo $row['phonenumber']; ?>">
+            <input type="text" class="w-100 form-control" name="phonenumber" value="<?php echo $row['phonenumber']; ?>" required>
         </div>
         <div class="col-md-6 mt-5">
+            <label for="email">Email</label>
+            <input type="text"  class="w-100 form-control" name="email" value="<?php echo $row['email']; ?>" required>
+        </div>
+        <div class="col-md-12 mt-5">
             <label for="classid">Class id</label>
-            <input type="text" class="w-100 form-control" name="classid" value="<?php echo $row['classid']; ?>">
+            <select class="form-control" name="classid" required>
+                <option value="">Please Select</option>
+                    <?php
+                        if ($result2->num_rows > 0){
+                        while($row2 = $result2->fetch_assoc()){
+                    ?>
+                <option value="<?php echo $row2['id']; ?>" <?php if($row['classid'] == $row2['id']) { ?> selected <?php } ?> ><?php echo $row2['classname']; ?></option>
+                <?php } ?>
+                <?php } ?>
+                                
+            </select>
         </div>
     </div>
     <div class="row">
