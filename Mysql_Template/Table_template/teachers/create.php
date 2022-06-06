@@ -1,6 +1,6 @@
 <?php
     include ("../connection.php");
-    $sql = "SELECT * FROM table_class"; 
+    $sql = "SELECT * FROM class"; 
     $result = $conn->query($sql);
 ?>
 <!DOCTYPE html>
